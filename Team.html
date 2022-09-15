@@ -1,6 +1,5 @@
 <!DOCTYPE html>
     <html lang="en">
-    
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,64 +7,95 @@
         <link rel = "stylesheet" href = "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
             integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+            <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css"/>
         <title>Employee Roster</title>
     </head>
     
-    <body>
-        <div class="jumbotron jumbotron-fluid text-center bg-dark">
+    <body style="background-image: url(https://img.freepik.com/premium-photo/creative-image-many-business-people-conference-group-meeting_31965-7388.jpg?w=2000)">
+        <div class="jumbotron jumbotron-fluid text-center bg-primary ">
             <div class="container">
-                <h1 class="display-4 text-light">My Team</h1>
-                <h1 class="display-4 text-light"><i class="fas fa-users"></i></h1>
+                <h1 class="display-6 text-light">My Team</h1>
+                <h1 class="display-6 text-light"><i class="fas fa-users"></i></h1>
             </div>
         </div>
         <!-- Start of Cards -->
-        <div class = "container">
+        <div class = "container ">
             <div class="col-md-12">
-                <div class="row">
-    <!---===============END OF HEAD CODE BLOCK====================-->,<div class="card m-2">
-    <div class="card-header">
-        <h1>151</h1>
+                <div class="row" id = "sortable">,<div class="card m-2">
+    <div class="card-header bg-primary text-light">
+        <h1>Jalen</h1>
         <hr>
         <h2><i class="fas fa-briefcase"></i> Manager</h2>
     </div>
     <div class= "card-body">
             <div class="list-group">
-                <p class="list-group-item list-group-item-action list-group-item-dark">ID: <span>151</span></p>
-                <p class="list-group-item list-group-item-action list-group-item-dark">Email: <span>51</span></p>
-                <p class="list-group-item list-group-item-action list-group-item-dark">Office Number: <span>51</span></p>
+                <p class="list-group-item list-group-item-action list-group-item-dark">ID: <span>178</span></p>
+                <p class="list-group-item list-group-item-action list-group-item-dark">Email: <span><a target="_blank" rel="noopener noreferrer" href="mailto:jalensanson@gmail.com">jalensanson@gmail.com</a></span></p>
+                <p class="list-group-item list-group-item-action list-group-item-dark">Office Number: <span>89</span></p>
             </div>
     </div>
-</div>
-<!---===============END OF MANAGER CODE BLOCK====================-->, <div class="card m-2">
-    <div class="card-header">
-        <h1>1</h1>
+</div>,<div class="card m-2">
+    <div class="card-header bg-primary text-light">
+        <h1>Nhan</h1>
         <hr>
         <h2><i class="fas fa-wrench"></i> Engineer</h2>
     </div>
     <div class= "card-body">
             <div class="list-group">
-                <p class="list-group-item list-group-item-action list-group-item-dark">ID: <span>5</span></p>
-                <p class="list-group-item list-group-item-action list-group-item-dark">Email: <span>151</span></p>
-                <a href = https://github.com/5 target="_blank"><button class="list-group-item list-group-item-action list-group-item-dark">GitHub: 5</button></a>
+                <p class="list-group-item list-group-item-action list-group-item-dark">ID: <span>365</span></p>
+                <p class="list-group-item list-group-item-action list-group-item-dark">Email: <span><a target="_blank" rel="noopener noreferrer" href="mailto:nhanng19@gmail.com">nhanng19@gmail.com</a></span></p>
+                <a href = https://github.com/nhanng19 target="_blank"><button class="list-group-item list-group-item-action list-group-item-dark">GitHub: nhanng19</button></a>
             </div>
     </div>
-</div>
-<!---===============END OF ENGINEER CODE BLOCK====================-->,<div class="card m-2">
-    <div class="card-header">
-        <h1>151</h1>
+</div>,<div class="card m-2">
+    <div class="card-header bg-primary text-light">
+        <h1>Chris</h1>
+        <hr>
+        <h2><i class="fas fa-wrench"></i> Engineer</h2>
+    </div>
+    <div class= "card-body">
+            <div class="list-group">
+                <p class="list-group-item list-group-item-action list-group-item-dark">ID: <span>198</span></p>
+                <p class="list-group-item list-group-item-action list-group-item-dark">Email: <span><a target="_blank" rel="noopener noreferrer" href="mailto:chrisshoe@gmail.com">chrisshoe@gmail.com</a></span></p>
+                <a href = https://github.com/mithers target="_blank"><button class="list-group-item list-group-item-action list-group-item-dark">GitHub: mithers</button></a>
+            </div>
+    </div>
+</div>,<div class="card m-2">
+    <div class="card-header bg-primary text-light">
+        <h1>Jack</h1>
+        <hr>
+        <h2><i class="fas fa-wrench"></i> Engineer</h2>
+    </div>
+    <div class= "card-body">
+            <div class="list-group">
+                <p class="list-group-item list-group-item-action list-group-item-dark">ID: <span>459</span></p>
+                <p class="list-group-item list-group-item-action list-group-item-dark">Email: <span><a target="_blank" rel="noopener noreferrer" href="mailto:jackster@gmail.com">jackster@gmail.com</a></span></p>
+                <a href = https://github.com/jackster target="_blank"><button class="list-group-item list-group-item-action list-group-item-dark">GitHub: jackster</button></a>
+            </div>
+    </div>
+</div>,<div class="card m-2">
+    <div class="card-header bg-primary text-light">
+        <h1>Jimmy</h1>
         <hr>
         <h2><i class="fa-solid fa-user-tie"></i> Intern</h2>
     </div>
     <div class= "card-body">
             <div class="list-group">
-                <p class="list-group-item list-group-item-action list-group-item-dark">ID: <span>51</span></p>
-                <p class="list-group-item list-group-item-action list-group-item-dark">Email: <span>51</span></p>
-                <p class="list-group-item list-group-item-action list-group-item-dark">School: <span>51</span></p>
+                <p class="list-group-item list-group-item-action list-group-item-dark">ID: <span>423</span></p>
+                <p class="list-group-item list-group-item-action list-group-item-dark">Email: <span><a target="_blank" rel="noopener noreferrer" href="mailto:jimmychoo@gmail.com">jimmychoo@gmail.com</a></span></p>
+                <p class="list-group-item list-group-item-action list-group-item-dark">School: <span>UC Irvine</span></p>
             </div>
     </div>
-</div>
-<!---===============END OF INTERN CODE BLOCK====================-->,</div>
+</div>,</div>
     </div>
-</div>  
+</div> 
+<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+<script>
+  $(function () {
+    $('#sortable').sortable();
+    $('#sortable').disableSelection();
+  });
+</script> 
 </body>
 </html>

@@ -17,8 +17,8 @@ node index.js
 
 
 
-![](.assets/img/front.PNG)
-![](.assets/img/front2.PNG)
+![](./assets/img/front.PNG)
+![](./assets/img/front2.PNG)
 
 [LINK TO THE VIDEO](https://drive.google.com/file/d/1Ci7bxKG6iobPDpliKT8-6gBYTkCGsD5i/view)
 

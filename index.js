@@ -1,14 +1,20 @@
+// Import classes, helper functions, and packages
+
 const inquirer = require("inquirer");
 const Manager = require("./lib/Manager.js");
 const Engineer = require("./lib/Engineer.js");
 const Intern = require("./lib/Intern.js");
-const htmlBlocks = require("./lib/htmlBlocks.js");
+const generateHTML = require("./lib/generateHTML.js");
 const fs = require("fs");
 const open = require("open");
 
-const team = [htmlBlocks.header(), htmlBlocks.footer()];
+// Helper to generate html 
 
-function initalize(){
+const team = [generateHTML.header(), generateHTML.footer()];
+
+// Manager prompt
+
+function managerStart(){
   return inquirer.prompt([
     {
       type: "input",
@@ -32,16 +38,19 @@ function initalize(){
     }
   ])
 }
-function buildTeam(){
+
+// Employee prompt
+
+function teamProfile(){
   inquirer.prompt([
     {
       type: "list",
       name: "role",
       message:"Who would you like to add to your team?",
-      choices: ["Engineer", "Intern", "Exit and open"]
+      choices: ["Engineer", "Intern", "Exit and Open"]
     }
-  ]).then((answer)=> {
-    if (answer.role === "Engineer"){
+  ]).then((data)=> {
+    if (data.role === "Engineer"){
       return inquirer.prompt([
         {
           type: "input",
@@ -63,13 +72,13 @@ function buildTeam(){
           name: "github",
           message: `What is your engineer's GitHub??`
         }
-      ]).then((answers)=>{
-        let engineer = new Engineer(answers.name, answers.id, answers.email,answers.github);
+      ]).then((data)=>{
+        let engineer = new Engineer(data.name, data.id, data.email,data.github);
         team.splice(team.length-1 , 0, engineer.getHTML());
-        buildTeam();
+        teamProfile();
       })
     }
-    if (answer.role === "Intern"){
+    if (data.role === "Intern"){
       return inquirer.prompt([
         {
           type: "input",
@@ -91,10 +100,10 @@ function buildTeam(){
           name: "school",
           message: `What is your intern's school?`
         }
-      ]).then((answers)=>{
-        let intern = new Intern(answers.name, answers.id, answers.email,answers.school);
+      ]).then((data)=>{
+        let intern = new Intern(data.name, data.id, data.email,data.school);
         team.splice(team.length-1, 0, intern.getHTML());
-        buildTeam();
+        teamProfile();
       })
     }
 
@@ -102,8 +111,10 @@ function buildTeam(){
   });
 }
 
+// Print and open HTML
+
 function printHTML(team){
-  fs.writeFile("Team.html", team.toString(), (err) => {
+  fs.writeFile("team.html", team.toString(), (err) => {
     if(err) {
       throw err;
     };
@@ -115,9 +126,12 @@ function printHTML(team){
   }, "1500")
   };
 
-initalize()
-.then((answers)=>{
-  const manager = new Manager(answers.name, answers.id, answers.email, answers.officeNumber);
+
+// Order of operation when running node index
+
+managerStart()
+.then((data)=>{
+  const manager = new Manager(data.name, data.id, data.email, data.officeNumber);
   team.splice(team.length-1, 0, manager.getHTML());
-  buildTeam();
+  teamProfile();
 });
